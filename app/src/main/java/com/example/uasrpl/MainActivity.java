@@ -17,12 +17,21 @@ import com.example.uasrpl.ui.main.SectionsPagerAdapter;
 import com.example.uasrpl.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-
+    public String nama, id;
     private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(
+                getIntent().hasExtra("id") &&
+                        getIntent().hasExtra("nama")
+        ){
+            id = getIntent().getStringExtra("id");
+            nama = getIntent().getStringExtra("nama");
+        }
+
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
