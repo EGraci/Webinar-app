@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Webinar</string>
+    <string name="tab_text_1">Beranda</string>
+    <string name="tab_text_2">Webinar</string>
+    <string-array name="jeniskelamin">
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

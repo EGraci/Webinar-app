@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tab.Beranda">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical"
+        android:background="@drawable/shape"
+        android:gravity="center">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Webinar yang akan datang"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:lineHeight="1.4dp"
+            android:layout_marginTop="-80dp"
+            android:textColor="#4b2354"
+            android:fontFamily="sans-serif"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event masih kosong silahkan daftar event terlebih  dahulu"
+            android:textAlignment="center"
+            android:textSize="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#666666"
+            android:fontFamily="sans-serif"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="__________________________________________________"
+            android:textAlignment="center"
+            android:textSize="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#666666"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Webinar lainnya yang kamu ikuti"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:lineHeight="1.4dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#4b2354"
+            android:fontFamily="sans-serif"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Belum ada event yang kamu ikuti"
+            android:textAlignment="center"
+            android:textSize="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#666666"
+            android:fontFamily="sans-serif"/>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lihat"
+            android:textColor="@color/white"
+            android:background="@drawable/edittext"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:shadowColor="@color/black"
+            style="@style/Widget.AppCompat.Button.Colored"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="__________________________________________________"
+            android:textAlignment="center"
+            android:textSize="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#666666"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Materi Webinar"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:lineHeight="1.4dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#4b2354"
+            android:fontFamily="sans-serif"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/edittext"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SAM Coaching Sosmed Guide"
+                android:textAlignment="center"
+                android:textSize="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:textColor="#666666"
+                android:fontFamily="sans-serif"/>
+
+            <Button
+                android:id="@+id/btnUnduhmateri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unduh Materi"
+                android:textColor="@color/white"
+                android:background="@drawable/edittext"
+                android:shadowColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
