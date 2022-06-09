@@ -1,8 +1,8 @@
 package com.example.uasrpl.Config;
 
 public class Link {
-    private final String event = "http://192.168.100.26/webinar/ryan/event.php";
-    private final String peserta = "http://192.168.100.26/webinar/ryan/peserta.php";
+    private final String event = "http://36.85.19.94/webinar/ryan/event.php";
+    private final String peserta = "http://36.85.19.94/webinar/ryan/peserta.php";
 
     public String getEvent() {
         return event;

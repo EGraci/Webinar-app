@@ -1,5 +1,7 @@
 package com.example.uasrpl;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -46,8 +48,11 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                String wpurl="https://wa.me/+6282328834886?text=Hai Kak, Saya Ingin Bertanya? ";
+
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(wpurl));
+                startActivity(intent);
             }
         });
     }
