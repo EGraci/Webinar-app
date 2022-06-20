@@ -30,15 +30,14 @@ public class MainActivity extends AppCompatActivity {
                 getIntent().hasExtra("id") &&
                         getIntent().hasExtra("nama")
         ){
-            id = getIntent().getStringExtra("id");
-            nama = getIntent().getStringExtra("nama");
+            this.id = getIntent().getStringExtra("id");
+            this.nama = getIntent().getStringExtra("nama");
         }
-
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager(), id, nama);
         ViewPager viewPager = binding.viewPager;
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = binding.tabs;

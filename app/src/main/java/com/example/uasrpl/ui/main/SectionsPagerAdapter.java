@@ -21,9 +21,11 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @StringRes
     private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
     private final Context mContext;
-
-    public SectionsPagerAdapter(Context context, FragmentManager fm) {
+    private String id, nama;
+    public SectionsPagerAdapter(Context context, FragmentManager fm, String kd, String nm) {
         super(fm);
+        this.id = kd;
+        this.nama = nm;
         mContext = context;
     }
 
@@ -35,7 +37,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             case 0:
                 return new Beranda();
             case 1:
-                return new Webinar();
+                return new Webinar(id, nama);
             default:
                 return PlaceholderFragment.newInstance(position + 1);
         }

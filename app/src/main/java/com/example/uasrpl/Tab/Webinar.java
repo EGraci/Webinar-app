@@ -31,6 +31,11 @@ import java.util.List;
 
 public class Webinar extends Fragment {
     private RecyclerView recyclerView;
+    private String id, nama;
+    public Webinar(String kd, String nm){
+        this.id = kd;
+        this.nama = nm;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -64,7 +69,7 @@ public class Webinar extends Fragment {
                 } catch (JSONException e) {
                     Log.e("Error", e.toString());
                 }
-                AdapterEvent tampilan = new AdapterEvent(data, ct);
+                AdapterEvent tampilan = new AdapterEvent(data, ct, id, nama);
                 recyclerView.setAdapter(tampilan);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
             }

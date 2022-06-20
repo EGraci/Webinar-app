@@ -1,12 +1,11 @@
 package com.example.uasrpl.Config;
 
 import android.content.Context;
-import android.util.Log;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -15,16 +14,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.uasrpl.Dto.EventDto;
 import com.example.uasrpl.R;
+import com.example.uasrpl.deskripsi;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterEvent extends RecyclerView.Adapter<AdapterEvent.EventSet>{
-    List<EventDto> ls_event = new ArrayList<>();
-    Context ct;
-    public AdapterEvent(List<EventDto> events, Context tx){
+    private List<EventDto> ls_event = new ArrayList<>();
+    private Context ct;
+    private String id, nama;
+    public AdapterEvent(List<EventDto> events, Context tx, String kd, String nm){
         this.ls_event = events;
         this.ct = tx;
+        this.id = kd;
+        this.nama = nm;
     }
     @NonNull
     @Override
@@ -48,7 +51,10 @@ public class AdapterEvent extends RecyclerView.Adapter<AdapterEvent.EventSet>{
                 // ls_event.get(position).getPembicara() ==> data pembicara seminar
                 // ls_event.get(position).getJamMulai() ==> data jam mulai
                 // ls_event.get(position).getJamSelesai() ==> data jam selesai
-                Toast.makeText(holder.view.getContext(), "ini untuk pindah class baru", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(ct, deskripsi.class);
+                intent.putExtra("id_peserta", id);
+                ct.startActivity(intent);
+//                Toast.makeText(holder.view.getContext(), nama+" "+id, Toast.LENGTH_LONG).show();
             }
         });
     }
