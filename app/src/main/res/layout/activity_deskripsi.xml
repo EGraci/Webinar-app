@@ -7,6 +7,10 @@
     android:background="@drawable/backgroundbelakang"
     tools:context=".deskripsi">
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,54 +32,54 @@
             tools:src="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/judul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:text="Judul"
+
             android:textAllCaps="true"
-
-            android:text="Webinar+ Menjaga kedaulatan Negara"
             android:textColor="@color/black"
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/deskripsi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_marginTop="20dp"
-
-            android:text="Webinar+ Menjaga kedaulatan Negara, kegiatan webinar ini memberikan pengalaman lebih kepada peserta. Selain peserta memperoleh informasi terkait dasar bela negara berbasis informatika, peserta juga mendapatkan pengalaman langsung melihat bagaimana seorang praktisi bekerja dalam menembus keamanan data"
+            android:text="  deskripsi "
             android:textColor="@color/black"
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/pembicara"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_marginTop="20dp"
-
-            android:text="Kementrian Pertahanan Republik Indonesia"
+            android:text=" pembicara "
             android:textColor="@color/black"
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/jammulai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_marginTop="20dp"
-
-            android:text="Jam 12.00- 14.00"
+            android:text="Jam selesai "
             android:textColor="@color/black"
             android:textSize="20dp" />
-
+        <TextView
+            android:id="@+id/jamselesai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text=" jam selesai"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
         <Button
-            android:id="@+id/btnLogin"
+            android:id="@+id/buttondaftar"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
-
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="10dp"
@@ -83,8 +87,7 @@
             android:shadowColor="@color/black"
             android:text="Daftar"
             android:textColor="@color/white" />
-
     </LinearLayout>
-
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

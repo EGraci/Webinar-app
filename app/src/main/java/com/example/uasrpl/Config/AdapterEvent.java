@@ -44,15 +44,15 @@ public class AdapterEvent extends RecyclerView.Adapter<AdapterEvent.EventSet>{
             @Override
             public void onClick(View view) {
                 // pindah ke class sampean mau
-                // ls_event.get(position).getIdEvent() ==> data id event
-                // ls_event.get(position).getGambar() ==> data gambar
-                // ls_event.get(position).getJudul() ==> data judul seminar
-                // ls_event.get(position).getDeskripsi() ==> data deskripsi seminar
-                // ls_event.get(position).getPembicara() ==> data pembicara seminar
-                // ls_event.get(position).getJamMulai() ==> data jam mulai
-                // ls_event.get(position).getJamSelesai() ==> data jam selesai
                 Intent intent = new Intent(ct, deskripsi.class);
-                intent.putExtra("id_peserta", id);
+                intent.putExtra("id_peserta", ls_event.get(position).getIdEvent());
+                intent.putExtra("id_event", ls_event.get(position).getIdEvent());
+                intent.putExtra("gambar", ls_event.get(position).getGambar());
+                intent.putExtra("judul", ls_event.get(position).getJudul());
+                intent.putExtra("Deskripsi", ls_event.get(position).getDeskripsi());
+                intent.putExtra("pembicara", ls_event.get(position).getPembicara());
+                intent.putExtra("jammulai", ls_event.get(position).getJamMulai());
+                intent.putExtra("selesai", ls_event.get(position).getJamSelesai());
                 ct.startActivity(intent);
 //                Toast.makeText(holder.view.getContext(), nama+" "+id, Toast.LENGTH_LONG).show();
             }
